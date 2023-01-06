@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="bg-gray-300 h-screen flex items-center justify-center">
+    <div class="bg-gray-100 h-screen flex items-center justify-center">
         <section class="text-gray-600 body-font relative">
-            <div class="container px-6 py-9 mx-auto w-form bg-white rounded-lg drop-shadow-2xl">
+            <div class="container px-6 py-9 mx-auto w-form bg-white rounded-md shadow-sm border border-gray-200">
                 <div class="flex flex-col text-center w-full">
                     <h1 class="sm:text-3xl text-7xl font-bold title-font text-gray-900">Login account</h1>
                 </div>
@@ -60,7 +60,7 @@
                                     <p class="text-green-700 py-3 px-5 text-center">{{ session('logout-success') }}</p>
                                 @endif
                                 @if (count($users) == 0)
-                                    <a class="bg-green-700 p-2 px-4 rounded-lg text-white" href="/setup">Setup</a>
+                                    <a class="bg-green-700 p-2 px-6 rounded-sm text-white text-sm font-semibold" href="/setup">Setup</a>
                                 @endif
                             </form>
                         </div>

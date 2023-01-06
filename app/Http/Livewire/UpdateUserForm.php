@@ -60,7 +60,7 @@ class UpdateUserForm extends Component
             $myUser->phone_number = $this->phone_number;
             $myUser->work_hours = $this->work_hours;
             $myUser->status = $this->status;
-            $myUser->image = $this->image->store('images');
+            $myUser->image = $this->image->store('images', 'public_disk');
             $myUser->save();
             $this->image = null;
         }elseif($this->image == null && !empty($this->password)){
@@ -85,7 +85,7 @@ class UpdateUserForm extends Component
             $myUser->work_hours = $this->work_hours;
             $myUser->password = Hash::make($this->password);
             $myUser->status = $this->status;
-            $myUser->image = $this->image->store('images');
+            $myUser->image = $this->image->store('images', 'public_disk');
             $myUser->save();
             $this->image = null;
             

@@ -61,7 +61,7 @@ class UserForm extends Component
                 'role_id' => $this->role_id,
                 'email' => $this->email,
                 'password' => Hash::make($this->password),
-                'image' => $this->image->store('images'),
+                'image' => $this->image->store('images', 'public_disk'),
                 'address' => $this->address,
                 'designation_id' => $this->designation_id,
                 'work_hours' => $this->work_hours,
